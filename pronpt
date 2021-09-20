@@ -1,0 +1,18 @@
+
+# cliで入力待ちになり、入力された値を変数に入れ、出力dd
+
+echo 名前を入力してください
+
+read name
+
+echo "こんにちは $name"
+
+read -p "名前: " pname
+echo "こんにちは $pname"
+
+
+read -p "引数の3色の色を表示: " c1 c2 c3
+
+echo $c1
+echo $c2
+echo $c3

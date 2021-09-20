@@ -1,0 +1,20 @@
+
+#配列
+colors=(red blue orange green)
+
+echo ${colors[0]}
+echo ${colors[1]}
+echo ${colors[2]}
+echo ${colors[3]}
+
+#配列の全てを取得
+echo ${colors[@]}
+#配列の長さ
+echo ${#colors[@]}
+
+#要素の変更
+colors[1]=purple
+
+#要素の追加
+colors+=(black white)
+echo ${colors[@]}

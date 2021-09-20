@@ -1,0 +1,20 @@
+#関数
+
+#UNIXでは0は正常終了。それ以外は異常終了
+
+hello() {
+  local name="satou"
+  if [[ $1 == "tanaka" ]]; then
+  echo "正常終了"
+    return 0
+  else
+  echo "異常終了"
+    return 1
+  fi
+}
+
+hello tanaka; echo $? 
+hello itou; echo $? 
+
+#変数はデフォでどこからでも参照できてしまう
+#localをつけることによって変数の参照範囲を関数の中だけに絞っている

@@ -1,0 +1,65 @@
+#if文の書き方
+read -p "名前教えて　:" name
+if [ "$name" = "田中" ]
+  then
+    echo "田中さんね"
+
+  elif [ "$name" = "佐藤" ]
+  then
+    echo "佐藤か！"
+
+  else
+    echo "知らないなぁ"
+fi
+
+
+#上と同じ意味
+
+# if [[ $name = "田中" ]]; then
+#   echo "田中さんね"
+
+# elif [[ $name = "佐藤" ]]; then
+#   echo "佐藤か！"  
+
+# else
+#   echo "知らないなぁ"
+# fi
+
+# 名前が空かの確認
+read -p "名前を教えて" name
+if [[ -z $name ]]; then
+  echo "名前を入力してね"
+fi
+
+
+
+#正規表現
+read -p "名前を教えて" name
+if [[ $name =~ ^t ]]; then
+echo "tから始まるのね"
+fi
+
+# -e　種類は問わない
+# -f　ファイルが存在するか
+# -d　ディレクトリが存在するか
+
+
+if [[ -f $0 ]]; then
+ echo "ファイルは存在します"
+fi
+
+
+if [[ -d $0 ]]; then
+ echo "ファイルは存在します"
+ else 
+ echo 'ディレクトリではありません'
+fi
+
+#数値の比較
+read -p "数値は？ " n
+if ((n > 10)); then
+echo "10より大きいです"
+else 
+echo "ちっさ"
+fi
+

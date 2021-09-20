@@ -1,0 +1,22 @@
+#jsのswitch
+
+#)が赤なのは問題なし
+
+read -p "Signal Color? " color
+case "$color" in
+    red)
+    echo "stop"
+    ;;
+    
+    blue | green) #or文が使える
+    echo "go"
+    ;;
+
+    yellow)
+    echo "caution"
+    ;;
+
+    *)
+    echo "wrong signal"
+    ;;
+esac

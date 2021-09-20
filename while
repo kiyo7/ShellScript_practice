@@ -1,0 +1,39 @@
+#while
+
+#continue　ループをスキップする
+#break ループを抜ける
+
+i=0
+while ((i < 10)); do
+  ((i++))
+
+  if ((i == 4)); then
+  continue
+  fi
+
+  if ((i == 9)); then
+    break
+  fi
+  echo $i
+done
+
+
+#無限ループ(条件で抜け出す)
+
+while :
+do
+  read -p "コマンドを入力してください: " cmd
+  if [[ $cmd == "quit" ]]; then
+    break 
+  else 
+    echo "$cmd"
+  fi
+done
+
+#ファイルの中身を出力
+
+i=1
+while read line; do
+  echo $i "$line"
+  ((i++))
+done < colors.txt

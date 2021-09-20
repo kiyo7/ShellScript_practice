@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# comment
+
+echo hello
+
+echo "Hello World"
+
+echo "Foo"; echo "bar" #複数の場合は;で区切る
+
